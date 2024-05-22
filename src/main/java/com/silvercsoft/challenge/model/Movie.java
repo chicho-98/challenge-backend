@@ -20,6 +20,8 @@ public class Movie {
 
     private String title;
 
+    private int runtimeMinutes;
+
     @ManyToMany
     @JoinTable(
             name = "movies_actors",

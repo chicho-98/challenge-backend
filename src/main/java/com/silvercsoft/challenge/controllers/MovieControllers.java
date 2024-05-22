@@ -29,7 +29,7 @@ public class MovieControllers {
     @GetMapping("/{id}")
     public MovieDTO getMovie(@PathVariable Long id) {
         Movie movie = this.movieService.getMovie(id);
-        return new MovieDTO(movie.getTitle(), movie.getActors());
+        return new MovieDTO(movie.getTitle(), movie.getRuntimeMinutes(), movie.getActors());
     }
 
     @GetMapping

@@ -30,6 +30,7 @@ public class MovieService {
     public Movie editMovie(Long id, EditMovieDTO editMovieDTO) {
         Movie movie = this.getMovie(id);
         movie.setTitle(editMovieDTO.title());
+        movie.setRuntimeMinutes(editMovieDTO.runtimeMinutes());
         return this.movieRepository.save(movie);
     }
 
