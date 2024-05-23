@@ -22,6 +22,8 @@ public class Movie {
 
     private int runtimeMinutes;
 
+    private String genre;
+
     @ManyToMany
     @JoinTable(
             name = "movies_actors",

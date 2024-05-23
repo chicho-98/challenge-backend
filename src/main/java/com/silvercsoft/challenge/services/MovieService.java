@@ -31,6 +31,7 @@ public class MovieService {
         Movie movie = this.getMovie(id);
         movie.setTitle(editMovieDTO.title());
         movie.setRuntimeMinutes(editMovieDTO.runtimeMinutes());
+        movie.setGenre(editMovieDTO.genre());
         return this.movieRepository.save(movie);
     }
 
